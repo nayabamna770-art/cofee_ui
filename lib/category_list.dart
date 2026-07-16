@@ -11,16 +11,17 @@ class CategoryList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            categoryCard("Coffee", "assets/coffeecup.png"),
+            categoryCard(
+              "Coffee",
+              "assets/coffeecup.png",
+              isSelected: true,
+            ), // ✅ green
             const SizedBox(width: 12),
-
-            categoryCard("Iced", "assets/whiteicelogo.jpg"),
+            categoryCard("Iced", "assets/whiteicelogo.jpg"), // white
             const SizedBox(width: 12),
-
-            categoryCard("Matcha", "assets/matcha.png"),
+            categoryCard("Matcha", "assets/matcha.png"), // white
             const SizedBox(width: 12),
-
-            categoryCard("Snacks", "assets/snacklogo.png"),
+            categoryCard("Snacks", "assets/snacklogo.png"), // white
           ],
         ),
       ),
@@ -36,11 +37,9 @@ class CategoryList extends StatelessWidget {
       width: 90,
       height: 110,
       decoration: BoxDecoration(
-        color: isSelected ? Colors.green : Colors.white, 
+        color: isSelected ? Colors.green : Colors.white,
         borderRadius: BorderRadius.circular(18),
-        border: Border.all(
-          color: Colors.green,
-        ), 
+        border: Border.all(color: Colors.green),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -50,9 +49,7 @@ class CategoryList extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-              color: isSelected
-                  ? Colors.white
-                  : Colors.green, // 
+              color: isSelected ? Colors.white : Colors.green, //
               fontWeight: FontWeight.bold,
             ),
           ),

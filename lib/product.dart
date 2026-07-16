@@ -78,7 +78,7 @@ class ProductCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Icon(
-                  //for add to cart
+                  //for add to cart+
                   Icons.add,
                   color: Colors.green,
                 ),
